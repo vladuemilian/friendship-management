@@ -1,0 +1,22 @@
+{
+    "name": "softservlet/friendship",
+    "description": "",
+    "authors": [
+        {
+            "name": "Softservlet",
+            "email": "dev@softservlet.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-0": {
+            "Softservlet\\Friendship\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
