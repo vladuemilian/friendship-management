@@ -1,4 +1,17 @@
 friendship-management
 =====================
 
-You can integrate friendship option with this package.
+#### Package description
+
+A laravel package which provides a "friendship" connection between 
+two entities. The relationship is called "friendship", but you can
+use this plugin to manage any relationship between two entities.
+
+#### Installation
+
+The package have implementation only for Laravel 4 framework.
+
+ * Run database migration:
+ `php artisan --bench=softservlet\friendship`
+ * Add the provider into app/config/app.php
+ `'Softservlet\Friendship\Laravel\Providers\LaravelFriendshipServiceProvider'`
