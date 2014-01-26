@@ -29,7 +29,7 @@ The package have implementation only for Laravel 4 framework.
  Your object must implements FriendableInterface, so you may have the following
  class into App\User.
 
- ```
+ ```php
  <?php namespace App\User;
 
  use Softservlet\Friendship\Core\FriendableInterface;
