@@ -11,7 +11,10 @@ use this plugin to manage any relationship between two entities.
 
 The package have implementation only for Laravel 4 framework.
 
- * Run database migration:
- `php artisan --bench=softservlet\friendship`
- * Add the provider into app/config/app.php
- `'Softservlet\Friendship\Laravel\Providers\LaravelFriendshipServiceProvider'`
+Run database migration:
+
+`php artisan --bench=softservlet\friendship`
+
+Add the provider into app/config/app.php
+
+`'Softservlet\Friendship\Laravel\Providers\LaravelFriendshipServiceProvider'`
