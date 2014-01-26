@@ -100,9 +100,9 @@ Friendship Object
 
 Assumming that $friendship is a instance like we did above, with $actor and $user as parameters
 we have:
- * $friendship->send() - sends a friendship request from $actor to $user
- * $friendship->accept() - the $actor will accept the friendship of $user(if exists one)
- * $friendship->deny() - the $actor will deny the friendship of $user(if exists one) 
- * $friendship->delete() - the $actor will delete the connection with $user(if exists one)
- * $friendship->exists($status) - return boolean if friendship exists between the $actor and
+ * `$friendship->send()` - sends a friendship request from $actor to $user
+ * `$friendship->accept()` - the $actor will accept the friendship of $user(if exists one)
+ * `$friendship->deny()` - the $actor will deny the friendship of $user(if exists one) 
+ * `$friendship->delete()` - the $actor will delete the connection with $user(if exists one)
+ * `$friendship->exists($status)` - return boolean if friendship exists between the $actor and
  the $user. the $status parameter represents the friendship status defined in FriendshipEloquent
