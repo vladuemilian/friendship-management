@@ -45,13 +45,50 @@ The package have implementation only for Laravel 4 framework.
  service provider needs to know about those entities, so let's edit it.
  In the above example, we defined our entity in App\User\User, open 
  `softservlet/friendship/src/Softservlet/Friendship/Laravel/Providers/LaravelFriendshipServiceProvider`
- and replace 
+ and replace:
 
  `$this->app->bind('Softservlet\Friendship\Core\FriendableInterface', 'Friends\User\User');`
 
- with
+ with:
 
  `$this->app->bind('Softservlet\Friendship\Core\FriendableInterface', 'App\User\User');`
-
  
+#### How to use
 
+ We define bellow a sample about how to use in Laravel context:
+
+ Let's write some code to see how to make a friendship connection
+ between two entities.
+
+ ```php
+ <?php 
+
+ class FriendshipController extends BaseController
+ {
+ 	public function __construct(FriendableInterface $friendable)
+	{
+		$this->friendable = $friendable;
+	}
+ 	
+	public function createFriendship()
+	{
+		$actor = $this->friendable->find(1); //the friendable object with id 1
+		$user = $this->friendable->find(2); 
+
+		//create a instance of Friendship object
+		$friendship = App::make('Softservlet\Friendship\Core\FriendshipInterface', array('actor' =>$actor, 'user'=> $user));
+
+		//actor sends a friendship request to user
+		$friendship->send();
+	}
+
+	public function acceptFriendship()
+	{
+		//define actor and user friendable objects
+
+		//create a friendable object
+
+		$friendship->accept();
+	}
+ }
+```
