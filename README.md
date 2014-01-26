@@ -39,3 +39,19 @@ The package have implementation only for Laravel 4 framework.
 	//your User implementation here
  }
  ```
+ * Configure the service provider
+
+ Since the package gives you opportunity to define your own entities, the 
+ service provider needs to know about those entities, so let's edit it.
+ In the above example, we defined our entity in App\User\User, open 
+ `softservlet/friendship/src/Softservlet/Friendship/Laravel/Providers/LaravelFriendshipServiceProvider`
+ and replace 
+
+ `$this->app->bind('Softservlet\Friendship\Core\FriendableInterface', 'Friends\User\User');`
+
+ with
+
+ `$this->app->bind('Softservlet\Friendship\Core\FriendableInterface', 'App\User\User');`
+
+ 
+
