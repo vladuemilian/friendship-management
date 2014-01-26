@@ -106,3 +106,19 @@ we have:
  * `$friendship->delete()` - the $actor will delete the connection with $user(if exists one)
  * `$friendship->exists($status)` - return boolean if friendship exists between the $actor and
  the $user. the $status parameter represents the friendship status defined in FriendshipEloquent
+
+Repository Object
+
+We've seen how to create a friendship, accept, deny and delete it, let's see how 
+to get informations about object friendships that we've made.
+
+For this, we have to call FriendshipEloquentRepository, with an actor instance asconstructor parameter 
+
+`$repository = App::make('Softservlet\Friendship\Core\FriendshipRepositoryInterface', array('actor'	=> $user));`
+
+Defined methods:
+
+ * $repository->getPendingFriendships() - returns an array with pending friendships sent by others to $actor
+ * $repository->getDeniedFriendships() - returns an array with denied friendships sent by others to $actor
+ * $repository->getAllFriendships() - returns an array with all friendships
+ * $repository->getAcceptedFriendships() - returns an array with all accepted friendships, no matter who is the sender
