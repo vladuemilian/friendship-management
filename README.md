@@ -118,7 +118,7 @@ For this, we have to call FriendshipEloquentRepository, with an actor instance a
 
 Defined methods:
 
- * $repository->getPendingFriendships() - returns an array with pending friendships sent by others to $actor
- * $repository->getDeniedFriendships() - returns an array with denied friendships sent by others to $actor
- * $repository->getAllFriendships() - returns an array with all friendships
- * $repository->getAcceptedFriendships() - returns an array with all accepted friendships, no matter who is the sender
+ * `$repository->getPendingFriendships()` - returns an array with pending friendships sent by others to $actor
+ * `$repository->getDeniedFriendships()` - returns an array with denied friendships sent by others to $actor
+ * `$repository->getAllFriendships()` - returns an array with all friendships
+ * `$repository->getAcceptedFriendships()` - returns an array with all accepted friendships, no matter who is the sender
